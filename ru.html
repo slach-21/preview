@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veluro — тканевые натяжные потолки и акустические стены в Таллинне</title>
+<meta name="description" content="Бесшовные тканевые потолки с интегрированным освещением. Монтаж за 1 день без нагрева, гарантия 10 лет. Рассчитайте стоимость онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;600;700;800&display=swap">
+<style>
+/* ===== Veluro — dark premium, editorial ===== */
+@font-face{font-family:'InterFallback';src:local('Arial');ascent-override:90.44%;descent-override:22.52%;line-gap-override:0%;size-adjust:107.12%}
+:root{
+  --maxw:1200px;
+  --bg:#0c0c11; --bg2:#111117; --panel:#16161e; --line:#25252f;
+  --ink:#f1eee7; --mut:#a6a296; --dim2:#7c796f;
+  --brass:#c9a55c; --brass2:#e6c98a; --glow:rgba(240,221,170,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--mut);font-family:'Inter','InterFallback',system-ui,Arial,sans-serif;font-size:16.5px;line-height:1.7}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+main{display:block}
+a{color:var(--brass2)}
+h1,h2{font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);font-weight:600;line-height:1.12;margin:0 0 16px}
+h1{font-size:clamp(40px,5.6vw,72px);letter-spacing:.2px}
+h2{font-size:clamp(32px,4.2vw,52px)}
+h3{font-size:19px;color:var(--ink);font-weight:700;margin:0 0 8px}
+section{padding:100px 0}
+.eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;color:var(--brass);margin-bottom:20px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--brass);display:inline-block}
+.sub{max-width:600px;font-size:17.5px;margin:0}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:52px;flex-wrap:wrap}
+.shead .sub{margin-bottom:6px}
+
+/* reveal on scroll (only when JS is present — .js set by app.js) */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+
+/* buttons */
+.btn{display:inline-block;border:0;cursor:pointer;border-radius:10px;padding:16px 30px;font-weight:800;font-size:15.5px;text-decoration:none;font-family:inherit;
+  background:linear-gradient(135deg,var(--brass2),var(--brass));color:#181205;box-shadow:0 14px 34px -14px rgba(201,165,92,.6);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 18px 40px -14px rgba(201,165,92,.75)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn--ghost:hover{border-color:var(--brass);box-shadow:none}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(12,12,17,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:27px;color:var(--ink);text-decoration:none;letter-spacing:.05em}
+.logo b{color:var(--brass)}
+.menu{display:flex;align-items:center;gap:22px}
+.menu a{color:var(--mut);text-decoration:none;font-size:14.5px;font-weight:600}
+.menu a:hover{color:var(--ink)}
+.menu .lang{color:var(--brass2);border:1px solid var(--line);border-radius:8px;padding:5px 10px}
+.menu .m-tel{color:var(--ink);font-weight:700}
+.navtoggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;color:var(--ink);font-size:20px;padding:4px 12px;cursor:pointer}
+.navm{display:none}
+@media(max-width:1020px){
+  .menu a:not(.lang){display:none}
+  .navtoggle{display:block}
+  .navm{display:none;position:absolute;left:0;right:0;top:70px;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 24px 18px}
+  .navm.open{display:block}
+  .navm a{display:block;padding:12px 0;color:var(--ink);text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+}
+
+/* ===== hero with interactive dimmer ===== */
+.hero{position:relative;padding:110px 0 90px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(55% 44% at 76% 0%,rgba(201,165,92,.14),transparent 70%)}
+.hgrid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+@media(max-width:960px){.hgrid{grid-template-columns:1fr;gap:46px}}
+.hero p.lead{max-width:560px;font-size:19px;margin:0 0 36px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+/* the room visual */
+.roombox{position:relative}
+.room{--dim:.75;position:relative;aspect-ratio:10/11;max-height:520px;width:100%;border-radius:18px;overflow:hidden;
+  background:linear-gradient(180deg,#14141b 0%,#0e0e14 55%,#131318 100%);border:1px solid var(--line)}
+.room .amb{position:absolute;inset:0;opacity:var(--dim);transition:opacity .2s ease;
+  background:radial-gradient(90% 55% at 50% 6%,rgba(240,221,170,.20),transparent 65%),
+             linear-gradient(180deg,rgba(240,221,170,.10),transparent 45%)}
+.room .rline{position:absolute;height:5px;border-radius:3px;background:linear-gradient(90deg,#f6e3b4,#fff,#f6e3b4);
+  box-shadow:0 0 28px 8px var(--glow);opacity:var(--dim);transition:opacity .2s ease}
+.room .rline.l1{top:11%;left:12%;right:38%}
+.room .rline.l2{top:11%;left:70%;right:12%}
+.room .rline.l3{top:24%;left:26%;right:26%;transform:rotate(90deg) scaleX(.001);display:none}
+/* furniture silhouettes */
+.room .sofa{position:absolute;bottom:12%;left:12%;width:44%;height:15%;border-radius:10px 10px 4px 4px;background:#1d1d26}
+.room .sofa::before{content:"";position:absolute;top:-38%;left:6%;width:88%;height:44%;border-radius:8px 8px 0 0;background:#20202a}
+.room .plant{position:absolute;bottom:12%;right:14%;width:7%;height:26%;border-radius:50% 50% 8px 8px;background:#181820}
+.room .floor{position:absolute;left:0;right:0;bottom:0;height:12%;background:linear-gradient(180deg,#101015,#15151b)}
+.room .rglow{position:absolute;bottom:12%;left:8%;right:8%;height:34%;opacity:calc(var(--dim)*.5);transition:opacity .2s ease;
+  background:radial-gradient(60% 90% at 50% 100%,rgba(240,221,170,.13),transparent 70%)}
+.dimmer{display:flex;align-items:center;gap:16px;margin-top:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:14px 18px}
+.dimmer .dlbl{font-size:13.5px;font-weight:700;color:var(--ink);white-space:nowrap}
+.dimmer .dico{color:var(--brass2);font-size:17px}
+.dimmer input[type=range]{flex:1;accent-color:var(--brass);height:4px;cursor:pointer}
+.dimhint{margin-top:10px;font-size:12.5px;color:var(--dim2);text-align:center}
+
+/* ===== stats strip ===== */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);padding:0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:38px 26px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+@media(max-width:860px){.stat:nth-child(3){border-left:0}.stat{padding:28px 20px}}
+.stat .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(34px,3.6vw,48px);font-weight:700;color:var(--brass2);line-height:1}
+.stat p{margin:8px 0 0;font-size:14px}
+
+/* ===== solutions: asymmetric editorial grid ===== */
+.solgrid{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);grid-template-areas:
+  "a a b"
+  "c d b"
+  "c e f"}
+@media(max-width:960px){.solgrid{grid-template-columns:1fr 1fr;grid-template-areas:"a a" "b c" "d e" "f f"}}
+@media(max-width:640px){.solgrid{grid-template-columns:1fr;grid-template-areas:"a" "b" "c" "d" "e" "f"}}
+.sol{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel);min-height:280px;
+  display:flex;flex-direction:column;justify-content:flex-end;transition:border-color .25s ease,transform .25s ease}
+.sol:hover{border-color:rgba(201,165,92,.55);transform:translateY(-4px)}
+.sol.a{grid-area:a;min-height:340px}.sol.b{grid-area:b;min-height:340px}.sol.c{grid-area:c}
+.sol.d{grid-area:d}.sol.e{grid-area:e}.sol.f{grid-area:f}
+.sol .scene{position:absolute;inset:0}
+.sol .txt{position:relative;padding:22px 24px;background:linear-gradient(180deg,transparent,rgba(10,10,15,.88) 38%)}
+.sol .txt p{margin:0;font-size:14.5px;max-width:420px}
+.sol .num{position:absolute;top:18px;left:22px;font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;letter-spacing:.14em;color:var(--dim2)}
+/* CSS scenes (placeholder visuals) */
+.scene{background:linear-gradient(180deg,#16161d,#0a0a0f)}
+.scene--lines::before{content:"";position:absolute;left:9%;right:34%;top:26%;height:5px;border-radius:3px;
+  background:linear-gradient(90deg,#f6e3b4,#fff);box-shadow:0 0 26px 7px var(--glow)}
+.scene--lines::after{content:"";position:absolute;left:38%;right:9%;top:48%;height:5px;border-radius:3px;
+  background:linear-gradient(90deg,#fff,#f6e3b4);box-shadow:0 0 26px 7px var(--glow)}
+.scene--floating::before{content:"";position:absolute;inset:12% 14% 42%;border-radius:8px;background:#12121a;
+  box-shadow:0 0 46px 12px rgba(230,201,138,.32)}
+.scene--track{background:radial-gradient(120px 160px at 30% 58%,rgba(246,227,180,.15),transparent 70%),
+  radial-gradient(120px 160px at 56% 58%,rgba(246,227,180,.15),transparent 70%),
+  radial-gradient(120px 160px at 80% 58%,rgba(246,227,180,.15),transparent 70%),
+  linear-gradient(180deg,#16161d,#0a0a0f)}
+.scene--track::before{content:"";position:absolute;top:18%;left:13%;right:13%;height:7px;border-radius:4px;background:#05050a}
+.scene--track::after{content:"";position:absolute;top:calc(18% + 7px);left:28%;width:9px;height:9px;border-radius:50%;
+  background:#ffe9bd;box-shadow:0 0 12px 3px var(--glow),74px 0 0 #ffe9bd,74px 0 12px 3px var(--glow),148px 0 0 #ffe9bd,148px 0 12px 3px var(--glow)}
+.scene--curtain{background:repeating-linear-gradient(90deg,#13131b 0 20px,#1b1b25 20px 40px)}
+.scene--curtain::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,227,180,.13),transparent 32%)}
+.scene--matte{background:radial-gradient(140% 120% at 50% 0%,#2a2a34,#0d0d13 75%)}
+.scene--matte::before{content:"";position:absolute;top:12%;left:38%;right:14%;height:4px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,#f2ddaa,#fff);box-shadow:0 0 24px 6px rgba(240,221,170,.35)}
+.scene--acoustic{background:repeating-linear-gradient(90deg,#191a22 0 54px,#0f0f16 54px 62px)}
+.scene--acoustic::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,227,180,.12),transparent 35%)}
+.gal-note{margin-top:24px;font-size:13.5px;color:var(--dim2);border-left:2px solid var(--brass);padding-left:14px;max-width:640px}
+
+/* ===== compare table ===== */
+.cmp{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
+.cmp table{width:100%;border-collapse:collapse;font-size:15px}
+.cmp th{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:700;color:var(--ink);text-align:left;padding:22px 24px;border-bottom:1px solid var(--line)}
+.cmp th.v{color:var(--brass2)}
+.cmp td{padding:17px 24px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp tr:last-child td{border-bottom:0}
+.cmp td.c{color:var(--dim2);font-weight:700;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.cmp td.v{color:var(--ink)}
+.cmp tr:hover td{background:rgba(201,165,92,.045)}
+@media(max-width:760px){
+  .cmp table,.cmp tbody,.cmp tr,.cmp td,.cmp th{display:block}
+  .cmp thead{display:none}
+  .cmp tr{border-bottom:1px solid var(--line);padding:8px 0}
+  .cmp td{border:0;padding:8px 20px}
+  .cmp td[data-h]::before{content:attr(data-h);display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim2);font-weight:700;margin-bottom:2px}
+  .cmp td.v::before{color:var(--brass)}
+}
+
+/* ===== calculator ===== */
+.calc{display:grid;grid-template-columns:1.35fr 1fr;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+@media(max-width:860px){.calc{grid-template-columns:1fr}}
+.calc-in{padding:34px 32px 30px;display:grid;gap:20px}
+.cfield label,.cfield legend{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:.02em}
+.cfield input[type=number],.cfield select{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:10px;color:var(--ink);
+  padding:13px 14px;font-size:15.5px;font-family:inherit}
+.cfield input:focus,.cfield select:focus,.dimmer input:focus{outline:2px solid rgba(201,165,92,.5)}
+.cfield fieldset{border:0;padding:0;margin:0}
+.copt{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:15px;color:var(--mut);cursor:pointer}
+.copt input{width:18px;height:18px;accent-color:var(--brass)}
+.calc-out{position:relative;background:linear-gradient(165deg,#1d1c23,#131318);border-left:1px solid var(--line);padding:36px 32px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.calc-out::before{content:"";position:absolute;top:-30%;right:-20%;width:70%;height:60%;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(201,165,92,.16),transparent)}
+@media(max-width:860px){.calc-out{border-left:0;border-top:1px solid var(--line)}}
+.calc-out .lbl{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--brass)}
+.calc-out .total{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(36px,4vw,50px);color:var(--ink);margin:10px 0 4px;font-weight:700}
+.calc-out .note{font-size:13.5px;margin:0 0 24px}
+.calc-note{margin-top:16px;font-size:13px;color:var(--dim2)}
+
+/* ===== process timeline ===== */
+.tl{position:relative;margin-top:26px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:26px;height:1px;background:var(--line)}
+.tlrow{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+@media(max-width:860px){.tlrow{grid-template-columns:1fr;gap:30px}.tl::before{left:26px;right:auto;top:0;bottom:0;width:1px;height:auto}}
+.tstep{position:relative;padding-top:64px}
+@media(max-width:860px){.tstep{padding:0 0 0 64px}}
+.tstep .dot{position:absolute;top:16px;left:0;width:21px;height:21px;border-radius:50%;background:var(--bg);border:2px solid var(--brass);box-shadow:0 0 14px rgba(201,165,92,.5)}
+@media(max-width:860px){.tstep .dot{top:4px;left:16px}}
+.tstep .n{font-family:'Cormorant Garamond',Georgia,serif;color:var(--dim2);font-size:15px;letter-spacing:.16em;margin-bottom:6px}
+.tstep p{margin:0;font-size:14.5px}
+.tstep .dur{display:inline-block;margin-top:10px;font-size:12.5px;color:var(--brass2);border:1px solid rgba(201,165,92,.4);border-radius:999px;padding:3px 12px}
+
+/* ===== materials band ===== */
+.mats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:760px){.mats{grid-template-columns:1fr}}
+.mat{padding:30px 28px 6px;border-left:1px solid var(--line)}
+.mat:first-child{border-left:0}
+@media(max-width:760px){.mat{border-left:0;border-top:1px solid var(--line);padding:24px 0 4px}.mat:first-child{border-top:0}}
+.mat h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:700}
+.mat p{font-size:14.5px;margin:0}
+
+/* ===== faq ===== */
+.faqgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+@media(max-width:860px){.faqgrid{grid-template-columns:1fr;gap:30px}}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:21px 4px;font-weight:700;color:var(--ink);font-size:16.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brass);font-size:26px;font-weight:300;flex-shrink:0;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 4px 22px;font-size:15.5px;max-width:640px}
+
+/* ===== contacts ===== */
+.contacts{display:grid;grid-template-columns:1fr 1.1fr;gap:56px}
+@media(max-width:860px){.contacts{grid-template-columns:1fr;gap:40px}}
+.cinfo p{margin:0 0 6px}
+.cinfo .big{color:var(--ink);font-weight:800;font-size:22px;text-decoration:none;display:inline-block;margin-bottom:4px}
+.chat{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.chatbtn{display:inline-block;border:1px solid var(--line);border-radius:10px;padding:11px 20px;color:var(--ink);text-decoration:none;font-weight:700;font-size:14.5px}
+.chatbtn:hover{border-color:var(--brass)}
+.qform{display:grid;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:32px}
+.qfield label{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.qfield input,.qfield textarea{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:10px;color:var(--ink);
+  padding:13px 14px;font-size:15.5px;font-family:inherit;resize:vertical}
+.qfield input:focus,.qfield textarea:focus{outline:2px solid rgba(201,165,92,.5)}
+.qform .fine{font-size:12.5px;color:var(--dim2);margin:0}
+.qok{background:var(--panel);border:1px solid rgba(201,165,92,.5);border-radius:18px;padding:44px;text-align:center;color:var(--ink)}
+.qok strong{font-size:22px}
+
+/* footer */
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:46px 0 36px;font-size:14px}
+.frow{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--mut);text-decoration:none;margin-right:18px}
+footer a:hover{color:var(--ink)}
+.fnote{margin-top:18px;font-size:12.5px;color:var(--dim2)}
+
+/* misc */
+.totop{position:fixed;right:20px;bottom:20px;z-index:40;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);
+  background:var(--panel);color:var(--brass2);font-size:19px;cursor:pointer;opacity:0;visibility:hidden;transition:opacity .25s}
+.totop.show{opacity:1;visibility:visible}
+.alt{background:var(--bg2)}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hrow">
+    <a href="#" class="logo">Veluro<b>.</b></a>
+    <nav class="menu">
+      <a href="#solutions">Решения</a>
+      <a href="#compare">Ткань vs ПВХ</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#process">Этапы</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacts">Контакты</a>
+      <a href="tel:+37255550000" class="m-tel">+372 5555 0000</a>
+      <a href="index.html" class="lang">EST</a>
+      <button class="navtoggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="navm">☰</button>
+    </nav>
+  </div>
+  <div class="navm" id="navm">
+    <a href="#solutions">Решения</a>
+    <a href="#compare">Ткань vs ПВХ</a>
+    <a href="#calc">Калькулятор</a>
+    <a href="#process">Этапы</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contacts">Контакты</a>
+    <a href="tel:+37255550000">+372 5555 0000</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <span class="eyebrow">Тканевые натяжные потолки · Таллинн и вся Эстония</span>
+      <h1>Потолок, который создаёт свет и тишину</h1>
+      <p class="lead">Бесшовные тканевые потолки и акустические стены с интегрированным освещением, скрытыми карнизами и вентиляцией. Монтаж за один день — без пыли, запаха и тепловых пушек.</p>
+      <div class="cta">
+        <a href="#calc" class="btn">Рассчитать стоимость</a>
+        <a href="#solutions" class="btn btn--ghost">Смотреть решения</a>
+      </div>
+    </div>
+    <div class="roombox">
+      <div class="room" id="room" aria-hidden="true">
+        <div class="amb"></div>
+        <div class="rline l1"></div>
+        <div class="rline l2"></div>
+        <div class="rglow"></div>
+        <div class="sofa"></div>
+        <div class="plant"></div>
+        <div class="floor"></div>
+      </div>
+      <div class="dimmer">
+        <span class="dico">☾</span>
+        <span class="dlbl">Свет — часть потолка</span>
+        <input type="range" id="dim" min="0" max="100" value="75" aria-label="Яркость освещения" />
+        <span class="dico">☀</span>
+      </div>
+      <p class="dimhint">Подвигайте ползунок — так работают световые линии в наших потолках</p>
+    </div>
+  </div>
+</section>
+
+<div class="stats" aria-label="Ключевые цифры">
+  <div class="wrap">
+    <div class="stat rv"><div class="n">12+</div><p>лет в отделке интерьеров</p></div>
+    <div class="stat rv"><div class="n">900+</div><p>реализованных объектов в Эстонии</p></div>
+    <div class="stat rv"><div class="n">10</div><p>лет гарантии на полотно</p></div>
+    <div class="stat rv"><div class="n">1</div><p>день — стандартный монтаж</p></div>
+  </div>
+</div>
+
+<section id="solutions">
+  <div class="wrap">
+    <div class="shead rv">
+      <div>
+        <span class="eyebrow">Решения</span>
+        <h2>Свет, форма и акустика — под ключ</h2>
+      </div>
+      <p class="sub">Каждый проект собираем из готовых решений: от классического матового полотна до световых линий и акустических стен.</p>
+    </div>
+    <div class="solgrid">
+      <div class="sol a rv"><div class="scene scene--lines" role="img" aria-label="Световые линии"></div><span class="num">01</span><div class="txt"><h3>Световые линии</h3><p>Встроенные LED-линии любой геометрии. Свет становится частью архитектуры потолка, а не люстрой на нём.</p></div></div>
+      <div class="sol b rv"><div class="scene scene--floating" role="img" aria-label="Парящий потолок"></div><span class="num">02</span><div class="txt"><h3>Парящий потолок</h3><p>Мягкая подсветка по периметру создаёт эффект невесомого полотна.</p></div></div>
+      <div class="sol c rv"><div class="scene scene--acoustic" role="img" aria-label="Акустические стены"></div><span class="num">03</span><div class="txt"><h3>Акустические стены</h3><p>Тканевые панели со звукопоглощающим наполнителем: тишина и дизайн в одном решении — для гостиных, спален и кабинетов.</p></div></div>
+      <div class="sol d rv"><div class="scene scene--track" role="img" aria-label="Трековые системы"></div><span class="num">04</span><div class="txt"><h3>Трековые системы</h3><p>Магнитные треки и поворотные споты заподлицо с полотном.</p></div></div>
+      <div class="sol e rv"><div class="scene scene--curtain" role="img" aria-label="Скрытые карнизы"></div><span class="num">05</span><div class="txt"><h3>Скрытые карнизы</h3><p>Ниши для штор без видимых креплений — текстиль будто выходит из потолка.</p></div></div>
+      <div class="sol f rv"><div class="scene scene--matte" role="img" aria-label="Классический матовый"></div><span class="num">06</span><div class="txt"><h3>Классический матовый</h3><p>Идеально ровное полотно шириной до 5 метров — без единого шва.</p></div></div>
+    </div>
+    <p class="gal-note">В preview-версии вместо фотографий — стилизованные визуализации. На финальном сайте здесь будет портфолио с реальными фото объектов и фильтром по типам решений.</p>
+  </div>
+</section>
+
+<section id="compare" class="alt">
+  <div class="wrap">
+    <div class="shead rv">
+      <div>
+        <span class="eyebrow">Честное сравнение</span>
+        <h2>Ткань или ПВХ-плёнка?</h2>
+      </div>
+      <p class="sub">Самый частый вопрос. Мы работаем с тканью осознанно — и честно показываем разницу, включая цену.</p>
+    </div>
+    <div class="cmp rv">
+      <table>
+        <thead>
+          <tr><th></th><th class="v">Тканевый потолок</th><th>ПВХ-плёнка</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="c">Монтаж</td><td class="v" data-h="Тканевый потолок">Без нагрева, 2–4 часа на комнату, мебель остаётся на месте</td><td data-h="ПВХ-плёнка">Тепловая пушка греет комнату до +60 °C</td></tr>
+          <tr><td class="c">Внешний вид</td><td class="v" data-h="Тканевый потолок">Матовая поверхность как идеально выкрашенный потолок, без швов до 5 м</td><td data-h="ПВХ-плёнка">Глянец и блики, на широких комнатах видны сварные швы</td></tr>
+          <tr><td class="c">Состав и запах</td><td class="v" data-h="Тканевый потолок">Полиэстер без ПВХ, без запаха с первого дня</td><td data-h="ПВХ-плёнка">Запах пластика в первые недели</td></tr>
+          <tr><td class="c">Температуры</td><td class="v" data-h="Тканевый потолок">От −40 до +80 °C — подходит для загородных домов</td><td data-h="ПВХ-плёнка">Трескается на морозе</td></tr>
+          <tr><td class="c">Акустика</td><td class="v" data-h="Тканевый потолок">Гасит эхо; есть акустические полотна с перфорацией</td><td data-h="ПВХ-плёнка">Отражает звук</td></tr>
+          <tr><td class="c">Цена</td><td class="v" data-h="Тканевый потолок">От 22 €/м² с монтажом</td><td data-h="ПВХ-плёнка">Дешевле — от 8 €/м²</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="calc-note rv">Да, плёнка дешевле. Если ваш приоритет — минимальный бюджет, честно скажем об этом на замере. Наша специализация — ткань и свет.</p>
+  </div>
+</section>
+
+<section id="calc">
+  <div class="wrap">
+    <div class="shead rv">
+      <div>
+        <span class="eyebrow">Калькулятор</span>
+        <h2>Сколько будет стоить ваш потолок</h2>
+      </div>
+      <p class="sub">Предварительный расчёт за 30 секунд. Точную смету зафиксируем после бесплатного замера — и она не изменится.</p>
+    </div>
+    <div class="calc rv">
+      <div class="calc-in" id="calcform">
+        <div class="cfield">
+          <label for="c-area">Площадь потолка, м²</label>
+          <input type="number" id="c-area" min="5" max="200" step="1" value="20" inputmode="numeric" />
+        </div>
+        <div class="cfield">
+          <label for="c-type">Тип решения</label>
+          <select id="c-type">
+            <option data-min="22" data-max="28">Классический матовый</option>
+            <option data-min="30" data-max="38">Парящий потолок</option>
+            <option data-min="38" data-max="48" selected>Световые линии</option>
+            <option data-min="44" data-max="55">Многоуровневый</option>
+          </select>
+        </div>
+        <div class="cfield">
+          <label for="c-fab">Класс ткани</label>
+          <select id="c-fab">
+            <option value="1">Стандарт</option>
+            <option value="1.25">Премиум</option>
+            <option value="1.4">Акустическая</option>
+          </select>
+        </div>
+        <div class="cfield">
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <label class="copt"><input type="checkbox" class="c-opt" value="250" /> Трековая система · +250&nbsp;€</label>
+            <label class="copt"><input type="checkbox" class="c-opt" value="180" /> Скрытый карниз · +180&nbsp;€</label>
+            <label class="copt"><input type="checkbox" class="c-opt" value="90" /> Вентиляционные элементы · +90&nbsp;€</label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="calc-out">
+        <span class="lbl">Ориентировочная стоимость</span>
+        <div class="total" id="c-total">—</div>
+        <p class="note">материалы и монтаж включены</p>
+        <div><button type="button" class="btn" id="c-quote">Получить точную смету →</button></div>
+      </div>
+    </div>
+    <p class="calc-note">Расчёт ориентировочный: итоговая цена зависит от геометрии помещения и схемы освещения. Смета после замера — фиксированная.</p>
+  </div>
+</section>
+
+<section id="process" class="alt">
+  <div class="wrap">
+    <div class="shead rv">
+      <div>
+        <span class="eyebrow">Этапы</span>
+        <h2>От замера до готового потолка</h2>
+      </div>
+      <p class="sub">Весь процесс занимает 1–2 недели, из них в вашей квартире мы работаем один день.</p>
+    </div>
+    <div class="tl">
+      <div class="tlrow">
+        <div class="tstep rv"><span class="dot"></span><div class="n">01</div><h3>Замер и консультация</h3><p>Бесплатный выезд по всей Эстонии. Обсуждаем задачи, свет и материалы, показываем образцы тканей.</p><span class="dur">≈ 1 час</span></div>
+        <div class="tstep rv"><span class="dot"></span><div class="n">02</div><h3>Проект и смета</h3><p>Схема размещения света, выбор полотна, фиксированная цена без «сюрпризов» при монтаже.</p><span class="dur">1–2 дня</span></div>
+        <div class="tstep rv"><span class="dot"></span><div class="n">03</div><h3>Производство</h3><p>Полотно кроится под размеры вашего помещения на европейском производстве.</p><span class="dur">5–10 дней</span></div>
+        <div class="tstep rv"><span class="dot"></span><div class="n">04</div><h3>Монтаж</h3><p>Чистая установка без пыли и нагрева. Вечером в комнате уже можно жить.</p><span class="dur">1 день</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="materials">
+  <div class="wrap">
+    <div class="shead rv">
+      <div>
+        <span class="eyebrow">Материалы</span>
+        <h2>Три класса ткани</h2>
+      </div>
+      <p class="sub">Работаем с европейскими полотнами (Франция, Германия). Сертификаты и живые образцы привозим на замер.</p>
+    </div>
+    <div class="mats">
+      <div class="mat rv"><h3>Стандарт</h3><p>Матовые полиэстеровые полотна без ПВХ. Ширина до 5 м — без швов. Гарантия 10 лет.</p></div>
+      <div class="mat rv"><h3>Акустика</h3><p>Микроперфорированные полотна, заметно снижающие эхо и уровень шума в помещении.</p></div>
+      <div class="mat rv"><h3>Влагостойкая</h3><p>Полотна с пропиткой для кухонь и ванных — не впитывают влагу и запахи.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="alt">
+  <div class="wrap faqgrid">
+    <div class="rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Частые вопросы</h2>
+      <p class="sub">Не нашли ответ — позвоните или напишите в WhatsApp, отвечаем быстро.</p>
+    </div>
+    <div class="faq rv">
+      <details><summary>Чем тканевый потолок отличается от ПВХ-плёнки?</summary><p>Ткань монтируется без нагрева, не пахнет, выглядит как идеально ровный крашеный потолок и выдерживает мороз. ПВХ дешевле, но глянцевый блеск и сварные швы выдают плёнку.</p></details>
+      <details><summary>Сколько длится монтаж?</summary><p>Стандартная комната — 2–4 часа, квартира целиком — обычно один день. Мебель выносить не нужно, пыли и запаха нет.</p></details>
+      <details><summary>Что будет со светильниками и люстрой?</summary><p>Всю электрику закладываем заранее: споты, треки, световые линии и люстры устанавливаются в день монтажа и сразу работают.</p></details>
+      <details><summary>Можно ли мыть тканевый потолок?</summary><p>Да: сухая чистка и лёгкая влажная уборка. Влагостойкие полотна переносят и больше — их ставят в кухнях и ванных.</p></details>
+      <details><summary>Сколько это стоит?</summary><p>Ориентир — от 22 €/м² вместе с монтажом; итог зависит от геометрии и света. Посчитайте в калькуляторе выше или закажите бесплатный замер.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contacts">
+  <div class="wrap">
+    <div class="contacts">
+      <div class="cinfo rv">
+        <span class="eyebrow">Контакты</span>
+        <h2>Обсудим ваш проект?</h2>
+        <p style="margin-bottom:28px">Оставьте заявку — перезвоним в течение рабочего дня, ответим на вопросы и договоримся о бесплатном замере.</p>
+        <p><a href="tel:+37255550000" class="big">+372 5555 0000</a></p>
+        <p><a class="big em-show" href="#" data-em="aW5mb0B2ZWx1cm8uZWU=">info@veluro.ee</a></p>
+        <p>Таллинн · выезжаем по всей Эстонии</p>
+        <p>Пн–Сб 9:00–19:00</p>
+        <div class="chat">
+          <a class="chatbtn" href="#" data-wa="37255550000">WhatsApp</a>
+          <a class="chatbtn" href="#" data-em="aW5mb0B2ZWx1cm8uZWU=">E-mail</a>
+        </div>
+      </div>
+      <form class="qform rv">
+        <div style="position:absolute;left:-9999px" aria-hidden="true">
+          <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+        </div>
+        <div class="qfield"><label for="f-name">Имя *</label><input id="f-name" type="text" required autocomplete="name" /></div>
+        <div class="qfield"><label for="f-phone">Телефон *</label><input id="f-phone" type="tel" required autocomplete="tel" /></div>
+        <div class="qfield"><label for="f-email">E-mail</label><input id="f-email" type="email" autocomplete="email" /></div>
+        <div class="qfield"><label for="f-msg">Комментарий</label><textarea id="f-msg" rows="4"></textarea></div>
+        <button type="submit" class="btn">Отправить заявку →</button>
+        <p class="fine">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <a href="#" class="logo">Veluro<b>.</b></a>
+      <nav>
+        <a href="#solutions">Решения</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#contacts">Контакты</a>
+        <a href="index.html">EST</a>
+      </nav>
+    </div>
+    <p class="fnote">© 2026 Veluro (рабочее название) · Preview-версия сайта · Телефон, e-mail и цифры — заглушки для демонстрации</p>
+  </div>
+</footer>
+
+<button class="totop" aria-label="Наверх">↑</button>
+
+<script>
+window.__PREVIEW__ = true;   /* preview: form simulates success, no backend */
+/* ============================================================
+   Veluro app.js — CSP-safe front-end (base + site binders).
+   Set GTM_ID below. Everything runs after idle; each binder
+   is wrapped in try/catch. No inline scripts anywhere.
+   ============================================================ */
+(function(){
+  var GTM_ID = "";  // e.g. "GTM-XXXXXXX" — leave empty to hide banner + skip analytics
+  var PREVIEW = !!window.__PREVIEW__;   // preview builds simulate form success (no backend)
+
+  /* mark JS availability immediately: .rv animations only apply on .js pages */
+  document.documentElement.classList.add("js");
+
+  var L = (document.documentElement.getAttribute("lang") || "en").slice(0,2);
+  var TXT = {
+    ru: {ok:"Спасибо!", okp:"Заявка отправлена — перезвоним в течение рабочего дня.", send:"Отправляем…", err:"Что-то пошло не так. Напишите нам на e-mail.", net:"Ошибка сети. Напишите нам на e-mail."},
+    et: {ok:"Aitäh!", okp:"Päring on saadetud — helistame tagasi tööpäeva jooksul.", send:"Saadame…", err:"Midagi läks valesti. Kirjutage meile e-postiga.", net:"Võrguviga. Kirjutage meile e-postiga."},
+    en: {ok:"Thank you!", okp:"Your request has been sent.", send:"Sending…", err:"Something went wrong. Email us instead.", net:"Network error. Email us instead."}
+  };
+  var S = TXT[L] || TXT.en;
+
+  /* ---- Cookie consent + GTM (loads only after Accept) ---- */
+  function cookieConsent(){
+    var bar = document.getElementById("ckbar"); if(!bar) return;
+    function loadGTM(){
+      if(!GTM_ID) return;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({"gtm.start": new Date().getTime(), event: "gtm.js"});
+      var s = document.createElement("script"); s.async = true;
+      s.src = "https://www.googletagmanager.com/gtm.js?id=" + GTM_ID;
+      document.head.appendChild(s);
+    }
+    if(!GTM_ID) return;                       // banner stays hidden (opacity:0)
+    var c = null; try{ c = localStorage.getItem("ck"); }catch(e){}
+    if(c === "yes"){ loadGTM(); return; }
+    if(c === "no"){ return; }
+    bar.classList.add("ck-show");
+    var y = document.getElementById("ckyes"), n = document.getElementById("ckno");
+    if(y) y.addEventListener("click", function(){ try{localStorage.setItem("ck","yes");}catch(e){} bar.classList.remove("ck-show"); loadGTM(); });
+    if(n) n.addEventListener("click", function(){ try{localStorage.setItem("ck","no");}catch(e){}  bar.classList.remove("ck-show"); });
+  }
+
+  /* ---- Anti-scrape contacts: base64 email / phone revealed by JS ---- */
+  function fillContacts(){
+    document.querySelectorAll("[data-em]").forEach(function(el){
+      try{ var e = atob(el.getAttribute("data-em")); el.href = "mailto:"+e;
+        if(el.classList.contains("em-show")) el.textContent = e; }catch(x){}
+    });
+    document.querySelectorAll("[data-wa]").forEach(function(el){
+      el.href = "https://wa.me/" + el.getAttribute("data-wa");
+    });
+  }
+
+  /* ---- Form submit -> /submit.php, inline thank-you, dataLayer event ---- */
+  function collect(fm){
+    var d = {};
+    fm.querySelectorAll(".qfield").forEach(function(f){
+      var l = f.querySelector("label"), i = f.querySelector("input,select,textarea");
+      if(l && i && i.value) d[(l.textContent||"").replace("*","").trim()] = i.value;
+    });
+    return d;
+  }
+  function showOk(fm){
+    try{ window.dataLayer = window.dataLayer || [];
+         window.dataLayer.push({event:"lead_submit", form_type:"quick"}); }catch(e){}
+    var ok = document.createElement("div"); ok.className = "qok";
+    var st = document.createElement("strong"); st.textContent = S.ok;
+    var p = document.createElement("p"); p.textContent = S.okp;
+    ok.appendChild(st); ok.appendChild(p);
+    fm.parentNode.replaceChild(ok, fm);
+    try{ ok.scrollIntoView({behavior:"smooth", block:"center"}); }catch(e){}
+  }
+  function bindForm(fm){
+    fm.addEventListener("submit", function(ev){
+      ev.preventDefault();
+      var hp = fm.querySelector("[name=company_website]");   // honeypot
+      var data = collect(fm);
+      data._hp = hp ? hp.value : "";
+      var em = fm.querySelector("input[type=email]"); data._email = em ? em.value : "";
+      var btn = fm.querySelector("button[type=submit]");
+      if(btn){ btn.dataset.lbl = btn.textContent; btn.disabled = true; btn.textContent = S.send; }
+      if(PREVIEW){ setTimeout(function(){ showOk(fm); }, 500); return; }
+      fetch("/submit.php", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(data)})
+        .then(function(r){ return r.json().catch(function(){ return {success:r.ok}; }); })
+        .then(function(j){
+          if(j && j.success){ showOk(fm); }
+          else { if(btn){ btn.disabled=false; btn.textContent=btn.dataset.lbl; } alert(S.err); }
+        })
+        .catch(function(){ if(btn){ btn.disabled=false; btn.textContent=btn.dataset.lbl; } alert(S.net); });
+    });
+  }
+
+  /* ---- Price calculator (#calcform) ---- */
+  function fmtEur(n){
+    var s = String(Math.round(n/10)*10), out = "";
+    while(s.length > 3){ out = " " + s.slice(-3) + out; s = s.slice(0,-3); }
+    return s + out;
+  }
+  function bindCalc(){
+    var box = document.getElementById("calcform"); if(!box) return;
+    var area = document.getElementById("c-area"),
+        type = document.getElementById("c-type"),
+        fab  = document.getElementById("c-fab"),
+        total= document.getElementById("c-total"),
+        btn  = document.getElementById("c-quote");
+    function calc(){
+      var a = Math.max(5, Math.min(200, parseFloat(area.value) || 0));
+      var o = type.options[type.selectedIndex];
+      var mn = parseFloat(o.getAttribute("data-min")), mx = parseFloat(o.getAttribute("data-max"));
+      var m = parseFloat(fab.value) || 1;
+      var add = 0;
+      box.querySelectorAll(".c-opt:checked").forEach(function(c){ add += parseFloat(c.value) || 0; });
+      var lo = Math.max(390, a*mn*m + add), hi = Math.max(430, a*mx*m + add);
+      total.textContent = fmtEur(lo) + " – " + fmtEur(hi) + " €";
+      return {a:a, type:o.textContent.trim(), fab:fab.options[fab.selectedIndex].textContent.trim(),
+              lo:lo, hi:hi,
+              opts:Array.prototype.map.call(box.querySelectorAll(".c-opt:checked"), function(c){
+                return (c.parentNode.textContent||"").split("·")[0].trim(); })};
+    }
+    ["input","change"].forEach(function(evt){
+      box.addEventListener(evt, calc, {passive:true});
+    });
+    if(btn) btn.addEventListener("click", function(){
+      var r = calc();
+      var msg = r.type + ", " + r.a + " m², " + r.fab +
+                (r.opts.length ? " + " + r.opts.join(", ") : "") +
+                " → " + fmtEur(r.lo) + "–" + fmtEur(r.hi) + " €";
+      var ta = document.getElementById("f-msg"); if(ta) ta.value = msg;
+      var c = document.getElementById("contacts");
+      if(c) c.scrollIntoView({behavior:"smooth"});
+      try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:"calc_quote"}); }catch(e){}
+    });
+    calc();
+  }
+
+  /* ---- Hero light dimmer ---- */
+  function bindDimmer(){
+    var d = document.getElementById("dim"), room = document.getElementById("room");
+    if(!d || !room) return;
+    d.addEventListener("input", function(){
+      room.style.setProperty("--dim", (parseFloat(d.value)||0)/100);
+    }, {passive:true});
+  }
+
+  /* ---- Scroll reveal (.rv -> .on) ---- */
+  function bindReveal(){
+    var els = document.querySelectorAll(".rv"); if(!els.length) return;
+    if(!("IntersectionObserver" in window)){ els.forEach(function(e){ e.classList.add("on"); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("on"); io.unobserve(en.target); } });
+    }, {rootMargin:"0px 0px -8% 0px", threshold:.08});
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  /* ---- Contact-click tracking (WhatsApp/Email buttons) ---- */
+  function bindChatTrack(){
+    document.querySelectorAll(".chatbtn").forEach(function(b){
+      b.addEventListener("click", function(){
+        var m="other";
+        if(b.hasAttribute("data-wa")) m="whatsapp";
+        else if(b.hasAttribute("data-em")) m="email";
+        else if((b.getAttribute("href")||"").indexOf("t.me")>-1) m="telegram";
+        try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:"contact_click", contact_method:m}); }catch(e){}
+      });
+    });
+  }
+
+  /* ---- Mobile burger menu + back-to-top ---- */
+  function bindNav(){
+    var t = document.querySelector(".navtoggle"), m = document.getElementById("navm");
+    if(t && m){
+      t.addEventListener("click", function(){ var o=m.classList.toggle("open"); t.setAttribute("aria-expanded", o?"true":"false"); });
+      m.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ m.classList.remove("open"); t.setAttribute("aria-expanded","false"); }); });
+      document.addEventListener("click", function(e){ if(m.classList.contains("open") && !m.contains(e.target) && e.target!==t && !t.contains(e.target)){ m.classList.remove("open"); t.setAttribute("aria-expanded","false"); } });
+    }
+    var top = document.querySelector(".totop");
+    if(top){
+      top.addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+      var shown=false; function upd(){ var s=(window.scrollY||window.pageYOffset)>500; if(s!==shown){ shown=s; top.classList.toggle("show", s); } }
+      window.addEventListener("scroll", upd, {passive:true}); upd();
+    }
+  }
+
+  /* ---- init: idle-deferred, fault-tolerant ---- */
+  function T(f){ try{ f(); }catch(e){} }
+  function init(){
+    T(cookieConsent); T(fillContacts); T(bindNav); T(bindChatTrack);
+    T(bindCalc); T(bindDimmer); T(bindReveal);
+    document.querySelectorAll(".qform").forEach(function(fm){ T(function(){ bindForm(fm); }); });
+  }
+  function go(){
+    var done = false;
+    function run(){ if(done) return; done = true; init(); }
+    if(window.requestIdleCallback){ window.requestIdleCallback(run); setTimeout(run, 1500); }
+    else setTimeout(run, 1);
+  }
+  if(document.readyState !== "loading") go(); else document.addEventListener("DOMContentLoaded", go);
+})();
+
+</script>
+</body>
+</html>
